@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: _platformVersion!=null?Image.memory(_platformVersion[0]['Appicon']):Text('111'),
+          child: _platformVersion!=null?Image.memory(_platformVersion[3]['Appicon']):Text('111'),
         ),
       ),
     );

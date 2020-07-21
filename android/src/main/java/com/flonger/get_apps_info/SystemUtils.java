@@ -63,7 +63,6 @@ public class SystemUtils {
                 for (PackageInfo packageInfo : list2) {
                     if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) <= 0) {
                         //第三方应用，否则系统应用
-                        Log.e("222",packageInfo.applicationInfo.loadIcon(context.getPackageManager()).toString());
                         AppInfoBean appInfoBean = new AppInfoBean();
                         appInfoBean.setAppName(packageInfo.applicationInfo.loadLabel(context.getPackageManager()).toString());
                         appInfoBean.setPackageName(packageInfo.packageName);
@@ -128,7 +127,6 @@ public class SystemUtils {
                 for (PackageInfo packageInfo : list2) {
                     if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) <= 0) {
                         //第三方应用，否则系统应用
-                        Log.e("222",packageInfo.applicationInfo.loadIcon(context.getPackageManager()).toString());
 
                         ByteArrayOutputStream baos = new ByteArrayOutputStream();
                         DrawableToBitmap(packageInfo.applicationInfo.loadIcon(context.getPackageManager())).compress(Bitmap.CompressFormat.JPEG, 100, baos);
